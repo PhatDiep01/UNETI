@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../webfonts/HelveticaNeue-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-family: "Helvetica Neue", sans-serif;
+    overflow-x: clip;
+    font-weight: 400;
+    color: #222;
+}
+
+li, ol, ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+input, textarea {
+    outline: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    padding: 0;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+iframe {
+    border: none;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+.thumb {
+    overflow: hidden;
+}
+
+.thumb img {
+    overflow: hidden;
+    transition: all linear .3s;
+}
+
+.thumb:hover img {
+    transform: scale(1.2);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.clamp2 {
+    -webkit-line-clamp: 2;
+}
+
+.line-clamp.clamp3 {
+    -webkit-line-clamp: 3;
+}
+
+.line-clamp.clamp4 {
+    -webkit-line-clamp: 4;
+}
+
+.line-clamp.clamp5 {
+    -webkit-line-clamp: 5;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    background: #1574D3;
+    border-radius: 100%;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    -webkit-transition: opacity 0s ease-out;
+    -o-transition: opacity 0s ease-out;
+    transition: opacity 0s ease-out;
+    z-index: 90;
+    display: none;
+    color: #fff;
+}
+
+#back-to-top.show {
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
