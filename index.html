@@ -31,35 +31,958 @@
 
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
-    <link rel="stylesheet" href="./css/lg-thumbnail.css">
-    <link rel="stylesheet" href="./css/lg-video.css">
+    <link rel="stylesheet" href="./css/lightgallery.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
 
-
-    <script src="./js/lightgallery.umd.js"></script>
-    <script src="./js/lg-thumbnail.min.js"></script>
-    <script src="./js/lg-video.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/lightgallery-all.js"></script>
     <script src="./js/swiper-bundle.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
     <a href="javascript:;" id="back-to-top">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
-    <header class="header">
-       
+    <header class="header position-relative">
+        <div class="top-header">
+            <div class="container">
+                <div class="wrap-name d-flex align-items-center justify-content-between">
+                    <div class="name-vi">
+                        <h1>TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP</h1>
+                    </div>
+                    <div class="name-en">
+                        <h1>UNIVERSITY OF ECONOMICS - TECHNOLOGY FOR INDUSTRIES</h1>
+                    </div>
+                </div>
+                <div class="img-tablet">
+                    <a href="/">
+                        <img src="./images/logo-uneti-tablet.png" alt="TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-header">
+            <div class="container">
+                <div class="menu-main">
+                    <div class="header_menu d-flex align-items-center justify-content-between gap-2">
+                        <div class="logo-mobile d-md-none d-block"><a href="/"><img src="./images/logo uneti mobile.png" alt="TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP"></a></div>
+                        <div class="main-menu d-flex gap-2">
+                            <nav class="d-md-block d-none">
+                                <ul>
+                                    <li>
+                                        <a href="/gui-cauhoi.html">TRANG GỬI CÂU HỎI</a>
+                                    </li>
+                                    <li>
+                                        <a href="/detail-sinhvien.html">SINH VIÊN</a>
+                                    </li>
+                                    <li>
+                                        <a href="/list-tintuc.html">DANH MỤC TIN</a>
+                                    </li>
+                                    <li>
+                                        <a href="/detail-thutuc.html">CHI TIẾT THỦ TỤC</a>
+                                    </li>
+                                    <li>
+                                        <a href="/cauhoi.html">CÂU HỎI</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="">Sản phẩm khác<i class="fa fa-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li class="has-dropdown">
+                                                <a href="">Link Variable 1<i class="fa fa-angle-right"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Link Variable 2</a></li>
+                                                    <li><a href="#">Link Variable 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="">Link Variable 2<i class="fa fa-angle-right"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Link Variable 1</a></li>
+                                                    <li class="has-dropdown">
+                                                        <a href="">Link Variable 1<i class="fa fa-angle-right"></i></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="#">Link Variable 2</a></li>
+                                                            <li><a href="#">Link Variable 3</a></li>
+                                                            <li class="has-dropdown">
+                                                                <a href="">Link Variable 1<i class="fa fa-angle-right"></i></a>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Link Variable 2</a></li>
+                                                                    <li><a href="#">Link Variable 3</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="#">Link Variable 3</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="mobile-header--right d-flex d-md-none gap-2 order-2">
+                                <a href="#mobile-menu-offcanvas" class="mobile-menu offcanvas-toggle">
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                    <span class="mobile-menu-dash"></span>
+                                </a>
+                            </div>
+                            <div class="search-wrap order-1">
+                                <div class="box-search">
+                                    <div class="btn-search l-title" onclick="showForm()"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <form action="/search.html" class="form-search" id="form-search" novalidate="novalidate">
+                                        <div><input id="k" name="k" type="text" class="form-control results" placeholder="Tìm kiếm" autofocus=""></div>
+                                        <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-leftside offcanvas-mobile-menu-section">
+                        <div class="offcanvas-header text-right">
+                            <button class="offcanvas-close">
+                                <i class="fa fa-times" style="font-size: 18px"></i>
+                            </button>
 
 
+
+                        </div>
+                        <div class="offcanvas-mobile-menu-wrapper">
+                            <div class="mobile-menu-center">
+                                <div class="offcanvas-menu">
+                                    <ul>
+                                        <li class="">
+                                            <div class="offcanvas-menu-expand"></div>
+                                            <a href="#"><span>Trang chủ</span></a>
+                                            <ul class="mobile-sub-menu" style="display: none">
+                                                <li><a href="#">Về chúng tôi</a></li>
+                                                <li><a href="#">Giới thiệu trường</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="offcanvas-menu-expand"></div>
+                                            <a href="viettnamnet.vn"><span>Tầm nhìn sứ mệnh</span></a>
+                                            <ul class="mobile-sub-menu">
+                                                <li>
+                                                    <div class="offcanvas-menu-expand"></div>
+                                                    <a href="#">Giá trị cốt lõi</a>
+                                                    <ul class="mobile-sub-menu">
+                                                        <li><a href="#">Đời sống học đường</a></li>
+                                                        <li><a href="#">Cơ sở vật chất</a></li>
+                                                        <li><a href="#">Lịch học theo khối lớp</a></li>
+                                                        <li><a href="#">Thực đơn hàng ngày</a></li>
+                                                        <li><a href="#">Tham quan nhà trường</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="mobile-sub-menu">
+                                                <li>
+                                                    <div class="offcanvas-menu-expand"></div>
+                                                    <a href="#">Thư viện ảnh</a>
+                                                    <ul class="mobile-sub-menu">
+                                                        <li><a href="#">Đời sống học đường</a></li>
+                                                        <li><a href="#">Cơ sở vật chất</a></li>
+                                                        <li><a href="#">Lịch học theo khối lớp</a></li>
+                                                        <li><a href="#">Thực đơn hàng ngày</a></li>
+                                                        <li><a href="#">Tham quan nhà trường</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="mobile-sub-menu">
+                                                <li>
+                                                    <div class="offcanvas-menu-expand"></div>
+                                                    <a href="#">Thư viện video</a>
+                                                    <ul class="mobile-sub-menu">
+                                                        <li><a href="#">Link Variable 3</a></li>
+                                                        <li><a href="#">Link Variable 3</a></li>
+                                                        <li><a href="#">Link Variable 3</a></li>
+                                                        <li><a href="#">Link Variable 3</a></li>
+                                                        <li><a href="#">Link Variable 3</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="offcanvas-menu-expand"></div>
+                                            <a href="#"><span>Tin tức sự kiện</span></a>
+                                            <ul class="mobile-sub-menu">
+                                                <li>
+                                                    <div class="offcanvas-menu-expand"></div>
+                                                    <a href="#">Thông báo nhà trường</a>
+                                                    <ul class="mobile-sub-menu">
+                                                        <li><a href="#">Link Variable 1</a></li>
+                                                        <li><a href="#">Link Variable 1</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-full-width.html">Tuyển sinh 2022 - 2023</a>
+                                                </li>
+                                                <li>
+                                                    <div class="offcanvas-menu-expand"></div>
+                                                    <a href="#">Blog 2</a>
+                                                    <ul class="mobile-sub-menu">
+                                                        <li><a href="#">Link Variable 1</a></li>
+                                                        <li><a href="#">Link Variable 1</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="offcanvas-menu-expand"></div>
+                                            <a href="#"><span>Pages</span></a>
+                                            <ul class="mobile-sub-menu">
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="service.html">Service</a></li>
+                                                <li><a href="faq.html">Frequently Questions</a></li>
+                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                                <li><a href="404.html">404 Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact-us.html">Liên hệ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-overlay"></div>
+                </div>
+            </div>
+        </div>
     </header>
+    <div class="main">
+        <section class="slideshow-wrap">
+            <div class="swiper slideshow">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" rel="nofollow">
+                            <img src="./images/slider/slider demo default - 1.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/slider/slider demo default - 2.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" rel="nofollow">
+                            <img src="./images/slider/slider demo default - 1.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/slider/slider demo default - 2.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                var swiper = new Swiper(".slideshow", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    loop: false,
+                    pagination: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    autoplay: false,
+                    navigation: false,
+                });
+            </script>
+        </section>
+        <section class="counter-wrap py-4 py-lg-5">
+            <div class="container">
+                <div class="title-counter text-center">
+                    <p>TẠI SAO HƠN 30.000 SINH VIÊN LỰA CHỌN UNETI ?</p>
+                </div>
+                <div class="list-count">
+                    <div class="item">
+                        <div class="number"># <span class="count">6</span></div>
+                        <div class="text">TOP 10 TRƯỜNG ĐẠI HỌC HÀNG ĐẦU</div>
+                    </div>
+                    <div class="item">
+                        <div class="number"><span class="count">99</span>%</div>
+                        <div class="text">SINH VIÊN CÓ VIỆC LÀM</div>
+                    </div>
+                    <div class="item">
+                        <div class="number"><span class="count">1200</span></div>
+                        <div class="text">GIẢNG VIÊN CHUYÊN NGÀNH</div>
+                    </div>
+                    <div class="item">
+                        <div class="number"># <span class="count">99</span></div>
+                        <div class="text">TOP TRƯỜNG ĐẠI HỌC HÀNG ĐẦU VIỆT NAM</div>
+                    </div>
+                    <div class="item">
+                        <div class="number"><span class="count">4000</span></div>
+                        <div class="text">ĐÀO TẠO HƠN 4000 NHÂN LỰC HÀNG NĂM</div>
+                    </div>
+                </div>
 
+            </div>
+        </section>
+        <section class="menu-link py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg-3 item-wrap">
+                        <a href="#" class="item mb-3">
+                            <div class="icon">
+                                <img src="./images/icon-png/dangkyxettuyen.png" alt="">
+                            </div>
+                            <div class="title">
+                                <h3>ĐĂNG KÝ XÉT TUYỂN ĐĂNG KÝ XÉT TUYỂN</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 item-wrap">
+                        <a href="#" class="item mb-3">
+                            <div class="icon">
+                                <img src="./images/icon-png/downloadbieumau.png" alt="">
+                            </div>
+                            <div class="title">
+                                <h3>DOWNLOAD BIỂU MẪU</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 item-wrap">
+                        <a href="#" class="item mb-3">
+                            <div class="icon">
+                                <img src="./images/icon-png/nhaphoctructuyen.png" alt="">
+                            </div>
+                            <div class="title">
+                                <h3>NHẬP HỌC TRỰC TUYẾN</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 item-wrap">
+                        <a href="#" class="item mb-3">
+                            <div class="icon">
+                                <img src="./images/icon-png/tuvantuyensinh.png" alt="">
+                            </div>
+                            <div class="title">
+                                <h3>TƯ VẤN TUYỂN SINH</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news-admissions py-4 py-lg-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="wrap-list-news">
+                            <div class="title-head">
+                                <h2>THÔNG BÁO TUYỂN SINH</h2>
+                            </div>
+                            <div class="list-news">
+                                <div class="item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 col-sm-2">
+                                            <div class="date">
+                                                <p class="d-block day-text">12</p>
+                                                <span class="month-text">Tháng 03</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-10">
+                                            <h3 class="title"><a href="#" class="line-clamp clamp2 hover-text">Thông báo mức điểm nhận hồ sơ xét tuyển đại học hệ chính quy và kết quả kỳ thi đánh giá tư duy</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 col-sm-2">
+                                            <div class="date">
+                                                <p class="d-block day-text">12</p>
+                                                <span class="month-text">Tháng 03</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-10">
+                                            <h3 class="title"><a href="#" class="line-clamp clamp2 hover-text">Thông báo mức điểm nhận hồ sơ xét tuyển đại học hệ chính quy và kết quả kỳ thi đánh giá tư duy</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 col-sm-2">
+                                            <div class="date">
+                                                <p class="d-block day-text">12</p>
+                                                <span class="month-text">Tháng 03</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-10">
+                                            <h3 class="title"><a href="#" class="line-clamp clamp2 hover-text">Thông báo mức điểm nhận hồ sơ xét tuyển đại học hệ chính quy và kết quả kỳ thi đánh giá tư duy</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 col-sm-2">
+                                            <div class="date">
+                                                <p class="d-block day-text">12</p>
+                                                <span class="month-text">Tháng 03</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-10">
+                                            <h3 class="title"><a href="#" class="line-clamp clamp2 hover-text">Thông báo mức điểm nhận hồ sơ xét tuyển đại học hệ chính quy và kết quả kỳ thi đánh giá tư duy</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-more text-center my-3">
+                                    <a href="#"><i class="fa-solid fa-arrow-right"></i> Xem tất cả</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="co-12 col-lg-6">
+                        <div class="banner mt-4 mt-lg-0">
+                            <a href="#"><img src="./images/banneruneti1.jpg" alt="" class="w-100"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner-tuyensinh-wrap">
+            <div class="swiper banner-tuyensinh">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/slider/slider demo default - 2.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" rel="nofollow">
+                            <img src="./images/slider/slider demo default - 1.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
 
+                    <div class="swiper-slide">
+                        <a href="#" rel="nofollow">
+                            <img src="./images/slider/slider demo default - 1.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/slider/slider demo default - 2.jpg" alt="" class="d-block w-100">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                var swiper = new Swiper(".banner-tuyensinh", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    loop: false,
+                    pagination: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    autoplay: false,
+                    navigation: false,
+                });
+            </script>
+        </section>
+        <section class="news-adminssion2 py-4 py-lg-5">
+            <div class="container">
+                <div class="wrap-news-adminssion2">
+                    <div class="title-pages">
+                        <h2>TIN TUYỂN SINH</h2>
+                    </div>
+                    <div class="list-news">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 line-center">
+                                <div class="item mb-3">
+                                    <a href="" class="img-news">
+                                        <div class="thumb mb-3"><img src="./images/news1.png" alt="" class="w-100"></div>
+                                    </a>
+                                    <div class="title mb-2">
+                                        <h3>
+                                            <a href="#" class="line-clamp clamp2 hover-text-red">
+                                                Chỉ còn 1 tháng trước kỳ thi tốt nghiệp THPT 2024, thí sinh nên làm gì?
+                                            </a>
+                                            <img src="./images/icon_news_hot.gif" alt="">
+                                        </h3>
+                                    </div>
+                                    <div class="date mb-2">
+                                        <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p>Theo lịch tuyển sinh của Bộ GD&ĐT, chậm nhất ngày 18/06/2024, tất cả các thí sinh bao gồm cả học sinh ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 line-center">
+                                <div class="item mb-3">
+                                    <a href="" class="img-news">
+                                        <div class="thumb mb-3"><img src="./images/news1.png" alt="" class="w-100"></div>
+                                    </a>
+                                    <div class="title mb-2">
+                                        <h3>
+                                            <a href="#" class="line-clamp clamp2 hover-text-red">
+                                                Chỉ còn 1 tháng trước kỳ thi tốt nghiệp THPT 2024, thí sinh nên làm gì?
+                                            </a>
+                                            <img src="./images/icon_news_hot.gif" alt="">
+                                        </h3>
+                                    </div>
+                                    <div class="date mb-2">
+                                        <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p>Theo lịch tuyển sinh của Bộ GD&ĐT, chậm nhất ngày 18/06/2024, tất cả các thí sinh bao gồm cả học sinh ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 line-center">
+                                <div class="item mb-3">
+                                    <a href="" class="img-news">
+                                        <div class="thumb mb-3"><img src="./images/news1.png" alt="" class="w-100"></div>
+                                    </a>
+                                    <div class="title mb-2">
+                                        <h3>
+                                            <a href="#" class="line-clamp clamp2 hover-text-red">
+                                                Chỉ còn 1 tháng trước kỳ thi tốt nghiệp THPT 2024, thí sinh nên làm gì?
+                                            </a>
+                                            <img src="./images/icon_news_hot.gif" alt="">
+                                        </h3>
+                                    </div>
+                                    <div class="date mb-2">
+                                        <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p>Theo lịch tuyển sinh của Bộ GD&ĐT, chậm nhất ngày 18/06/2024, tất cả các thí sinh bao gồm cả học sinh ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pages-more my-3 text-end">
+                            <a href="#"><i class="fa-solid fa-arrow-right"></i> Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pages-wrap py-4 py-lg-5">
+            <div class="container">
+                <div class="wrap-pages-content">
+                    <div class="title-pages">
+                        <h2>TRUYỀN THÔNG BÁO CHÍ</h2>
+                    </div>
+                    <div class="list-pages">
+                        <div class="item-pages-head mb-4 mb-lg-3">
+                            <div class="row g-2 g-lg-3">
+                                <div class="col-12 col-lg-4">
+                                    <a href="#">
+                                        <div class="thumb mb-2"><img src="././images/pages1.png" alt="" class="w-100 h-100"></div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="title-head mb-3">
+                                        <h3><a href="#" class="line-clamp clamp2 hover-text-red">Vòng chung kết cuộc thi “Ý tưởng sáng tạo khởi nghiệp sinh viên Uneti năm học 2023-2024” đã thành công tốt đẹp</a></h3>
+                                    </div>
+                                    <div class="date mb-3">
+                                        <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p class="line-clamp clamp3">Cuộc thi Ý tưởng sáng tạo khởi nghiệp sinh viên Uneti năm học 2023-2024 được tổ chức nhằm nâng cao nhận thức về sáng tạo khởi nghiệp, tạo sân chơi cho sinh viên trong việc phát huy khả năng sáng tạo ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-pages-body">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 line-center">
+                                    <div class="item mb-3">
+                                        <div class="row g-2">
+                                            <div class="col-5">
+                                                <a href="#">
+                                                    <div class="thumb"><img src="./images/news1.png" class="h-100 w-100" alt=""></div>
+                                                </a>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="title mb-3">
+                                                    <h3>
+                                                        <a href="#" class="line-clamp clamp3 hover-text-red">
+                                                            Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="date mb-2">
+                                                    <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 line-center">
+                                    <div class="item mb-3">
+                                        <div class="row g-2">
+                                            <div class="col-5">
+                                                <a href="#">
+                                                    <div class="thumb"><img src="./images/news1.png" class="h-100 w-100" alt=""></div>
+                                                </a>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="title mb-3">
+                                                    <h3>
+                                                        <a href="#" class="line-clamp clamp3 hover-text-red">
+                                                            Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="date mb-2">
+                                                    <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 line-center">
+                                    <div class="item mb-3">
+                                        <div class="row g-2">
+                                            <div class="col-5">
+                                                <a href="#">
+                                                    <div class="thumb"><img src="./images/news1.png" class="h-100 w-100" alt=""></div>
+                                                </a>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="title mb-3">
+                                                    <h3>
+                                                        <a href="#" class="line-clamp clamp3 hover-text-red">
+                                                            Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="date mb-2">
+                                                    <p><img src="./images/icon-png/date icon.png" alt=""> 12/5/2025</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+
+            </div>
+        </section>
+        <section class="nganhdaotao py-4">
+            <div class="container">
+                <div class="wrap-nganhdaotao">
+                    <div class="title-pages">
+                        <h2>CÁC NGÀNH ĐÀO TẠO</h2>
+                    </div>
+                    <div class="swipper-news-wrap">
+                        <div class="swiper swipper-news">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item">
+                                    <a href="#" rel="nofollow">
+                                        <div class="thumb">
+                                            <img src="./images/news1.png" alt="" class="h-100 w-100">
+                                        </div>
+                                    </a>
+                                    <div class="title ">
+                                        <h3><a href="" class="hover-text-red line-clamp clamp3">Workshop: “AI và tương lai Gen Z” dành riêng cho giảng viên, sinh viên Khoa ICT</a></h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <a href="#" rel="nofollow">
+                                        <div class="thumb">
+                                            <img src="./images/news1.png" alt="" class="h-100 w-100">
+                                        </div>
+                                    </a>
+                                    <div class="title ">
+                                        <h3><a href="" class="hover-text-red line-clamp clamp3">Workshop: “AI và tương lai Gen Z” dành riêng cho giảng viên, sinh viên Khoa ICT</a></h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <a href="#" rel="nofollow">
+                                        <div class="thumb">
+                                            <img src="./images/news1.png" alt="" class="h-100 w-100">
+                                        </div>
+                                    </a>
+                                    <div class="title ">
+                                        <h3><a href="" class="hover-text-red line-clamp clamp3">Workshop: “AI và tương lai Gen Z” dành riêng cho giảng viên, sinh viên Khoa ICT</a></h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <a href="#" rel="nofollow">
+                                        <div class="thumb">
+                                            <img src="./images/news1.png" alt="" class="h-100 w-100">
+                                        </div>
+                                    </a>
+                                    <div class="title ">
+                                        <h3><a href="" class="hover-text-red line-clamp clamp3">Workshop: “AI và tương lai Gen Z” dành riêng cho giảng viên, sinh viên Khoa ICT</a></h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <a href="#" rel="nofollow">
+                                        <div class="thumb">
+                                            <img src="./images/news1.png" alt="" class="h-100 w-100">
+                                        </div>
+                                    </a>
+                                    <div class="title ">
+                                        <h3><a href="" class="hover-text-red line-clamp clamp3">Workshop: “AI và tương lai Gen Z” dành riêng cho giảng viên, sinh viên Khoa ICT</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <script>
+                            var swiper = new Swiper(".swipper-news", {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                                autoHeight: false,
+                                loop: false,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "bullets",
+                                    clickable: true,
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                },
+                                autoplay: false,
+                                navigation: false,
+                                breakpoints: {
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 15,
+                                    },
+                                    1024: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 20,
+                                    },
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="album-wrap py-4 py-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-5 mb-lg-5">
+                        <div class="title-album mb-4">
+                            <h2>VIDEO</h2>
+                        </div>
+                        <div class="swiper-video-wrap">
+                            <div class="swiper swiper-video">
+                                <div class="swiper-wrapper video_gallery">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="https://youtu.be/l5DQrqnequQ?si=1kB8RI1nQwgguvgx">
+                                                <div class="thumb-video">
+                                                    <img src="./images/video.png" alt="" class="w-100">
+                                                </div>
+                                                <div class="title">
+                                                    <h3 class="line- clamp clamp2">Giới thiệu UNETI</h3>
+                                                </div>
+                                                <div class="play-btn">
+                                                    <img src="./images/icon-png/btnPlay.png" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="https://youtu.be/l5DQrqnequQ?si=1kB8RI1nQwgguvgx">
+                                                <div class="thumb-video">
+                                                    <img src="./images/video.png" alt="" class="w-100">
+                                                </div>
+                                                <div class="title">
+                                                    <h3 class="line- clamp clamp2">Giới thiệu UNETI</h3>
+                                                </div>
+                                                <div class="play-btn">
+                                                    <img src="./images/icon-png/btnPlay.png" alt="" class="w-100">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="https://youtu.be/l5DQrqnequQ?si=1kB8RI1nQwgguvgx">
+                                                <div class="thumb-video">
+                                                    <img src="./images/video.png" alt="" class="w-100">
+                                                </div>
+                                                <div class="title">
+                                                    <h3 class="line- clamp clamp2">Giới thiệu UNETI</h3>
+                                                </div>
+                                                <div class="play-btn">
+                                                    <img src="./images/icon-png/btnPlay.png" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"><i class="fa-solid fa-angles-left"></i></div>
+                                <div class="swiper-button-next"><i class="fa-solid fa-angles-right"></i></div>
+                            </div>
+                            <script>
+                                $('.video_gallery').lightGallery({
+                                    selector: 'a'
+                                });
+                                var swiper = new Swiper(".swiper-video", {
+                                    slidesPerView: 1,
+                                    spaceBetween: 10,
+                                    autoHeight: false,
+                                    loop: false,
+                                    autoplay: {
+                                        delay: 5000,
+                                        disableOnInteraction: false,
+                                    },
+                                    autoplay: false,
+                                    navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="title-album mb-4">
+                            <h2>HÌNH ẢNH</h2>
+                        </div>
+                        <div class="swiper-photo-wrap">
+                            <div class="swiper swiper-photo">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="./images/video.png">
+                                                <div class="thumb-video">
+                                                    <img src="./images/video.png" alt="" class="w-100">
+                                                </div>
+                                                <div class="title">
+                                                    <h3 class="line- clamp clamp2">Giới thiệu UNETI</h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="./images/video.png">
+                                                <div class="thumb-video">
+                                                    <img src="./images/video.png" alt="" class="w-100">
+                                                </div>
+                                                <div class="title">
+                                                    <h3 class="line- clamp clamp2">Giới thiệu UNETI</h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"><i class="fa-solid fa-angles-left"></i></div>
+                                <div class="swiper-button-next"><i class="fa-solid fa-angles-right"></i></div>
+                                <script>
+                                    $('.swiper-photo').lightGallery({
+                                        selector: 'a'
+                                    });
+                                    var swiper = new Swiper(".swiper-photo", {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        autoHeight: false,
+                                        loop: false,
+                                        autoplay: {
+                                            delay: 5000,
+                                            disableOnInteraction: false,
+                                        },
+                                        autoplay: false,
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="social-embed py-5">
+            <div class="container">
+                <div class="title-album mb-4">
+                    <h2>CÁC KÊNH THÔNG TIN UNETI</h2>
+                </div>
+                <div class="wrap-social">
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                        
+                        </div>
+                        <div class="col-6 col-lg-3">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer py-4 py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-2 mb-3">
+                    <div class="logo-footer"><a href="/"><img src="./images/logo uneti footer.png" alt="TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP" title="TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP"></a></div>
+                </div>
+                <div class="col-12 col-lg-5 mb-3">
+                    <div class="item">
+                        <div class="title-info mb-3">
+                            <h3>CƠ SỞ HÀ NỘI</h3>
+                        </div>
+                        <div class="content-info">
+                            <p>Số 456 Minh Khai, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội</p>
+                            <p>Số 218 Đường Lĩnh Nam, Q. Hoàng Mai, TP. Hà Nội</p>
+                            <p>024.38621504 - 024.38623938</p>
+                            <p>web@uneti.edu.vn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 mb-3">
+                    <div class="item">
+                        <div class="title-info mb-3">
+                            <h3>CƠ SỞ HÀ NỘI</h3>
+                        </div>
+                        <div class="content-info">
+                            <p>Số 456 Minh Khai, P. Vĩnh Tuy, Q. Hai Bà Trưng, TP. Hà Nội</p>
+                            <p>Số 218 Đường Lĩnh Nam, Q. Hoàng Mai, TP. Hà Nội</p>
+                            <p>024.38621504 - 024.38623938</p>
+                            <p>web@uneti.edu.vn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="wrap-footer-bottom d-block d-lg-flex align-items-center justify-content-between">
+                <span class="copy-right">© 2025 TRƯỜNG ĐẠI HỌC KINH TẾ - KỸ THUẬT CÔNG NGHIỆP</span>
+                <span class="count-visits">Đang truy cập: <strong>1.234</strong> &nbsp; | &nbsp; Tổng lượt truy cập: <strong>2.349.004</strong></span>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/main.js"></script>
 
