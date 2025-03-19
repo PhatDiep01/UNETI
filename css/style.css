@@ -1368,3 +1368,116 @@ progress {
     height: auto;
     display: block;
 }
+
+.file-container {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: rgba(97, 149, 210, 0.05);
+    max-width: 100%;
+}
+
+.file-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-content h3 {
+    line-height: unset;
+}
+
+.file-description {
+    font-size: 1rem;
+    color: #2D2D2D;
+    flex: 1;
+    font-weight: 500;
+    margin-right: 30px;
+    line-height: 26px;
+}
+
+.file-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+.file-date {
+    font-size: .875rem;
+    color: #3F3F3F;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #f8f9fa;
+    color: #0F51A0;
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: 1px solid #0F51A0;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 700;
+}
+
+.download-button:hover {
+    background-color: #0F51A0;
+    color: #fff;
+}
+
+.mobile-menu-dash {
+    background: #fff;
+}
+
+.offcanvas-menu-expand::after {
+    color: #0F51A0;
+}
+
+.external-links .item {
+    padding: 10px;
+    background-color: #0F51A0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+
+}
+
+.external-links .item .title h3 {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.external-links .item .arrow i {
+    color: rgb(255 255 255 / 50%);
+    font-size: 1.2rem;
+    padding-right: 5px;
+    transition: all .3s linear;
+}
+
+.external-links .item:hover .arrow i {
+    padding: 0;
+}
+
+.external-links .item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrap-news-hot .list-news .item .thumb {
+    height: 70px;
+}
+.wrap-news-hot .list-news .item .title h3 a {
+    color: #0F51A0; 
+    font-size: 1rem;
+    line-height: 26px;
+    font-weight: 500;
+}
