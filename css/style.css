@@ -844,7 +844,7 @@ progress {
 }
 
 .item-pages-body .item .title h3 a {
-    display: inline;
+    /* display: inline; */
     font-size: 1rem;
     font-weight: 500;
     color: #0F51A0;
@@ -1475,9 +1475,28 @@ progress {
 .wrap-news-hot .list-news .item .thumb {
     height: 70px;
 }
+
 .wrap-news-hot .list-news .item .title h3 a {
-    color: #0F51A0; 
+    color: #0F51A0;
     font-size: 1rem;
     line-height: 26px;
     font-weight: 500;
+}
+
+.album-wrap .swiper-video-wrap .thumb-video,
+.album-wrap .swiper-photo-wrap .thumb-video {
+    height: 350px;
+}
+
+.block-bieumau .title h1 {
+    line-height: 46px;
+    font-size: 1.625rem;
+    color: #2D2D2D;
+    font-weight: 700;
+}
+
+.file-content .dateView {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
