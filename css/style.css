@@ -1500,3 +1500,55 @@ progress {
     align-items: center;
     gap: 20px;
 }
+
+
+
+
+
+.item-detailvideo .title-album h3 {
+    font-size: 1.125rem;
+    color: #0F51A0;
+    line-height: 160%;
+    font-weight: 700;
+}
+
+
+.wrap-list-album .item-detailvideo {
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap-list-album .item-detailvideo .img-album {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 180px;
+    cursor: pointer;
+}
+.wrap-list-album .item-detailvideo .img-album img {
+    height: 100%;
+}
+.wrap-list-album .item-detailvideo .img-album::after {
+    content: "\f144";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    font-size: 50px;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wrap-list-album .item-detailvideo .img-album:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.wrap-list-album .item-detailvideo .img-album:active::after {
+    transform: translate(-50%, -50%) scale(0.9);
+}
