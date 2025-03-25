@@ -48,6 +48,27 @@
     <a href="javascript:;" id="back-to-top">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
+    <div class="head-link">
+        <div class="zalo-wrap" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Liên hệ qua zalo">
+            <div class="zalo-chat-widget">
+                <a href="#" id="example"><img src="./images/icon-png/icon_zalo.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="link-contact">
+            <div class="facebook mb-3">
+                <a href="#" id="example" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Chat với chúng tôi"><img src="./images/icon-png/icon_messenger.png" alt=""></a>
+            </div>
+            <div class="phone">
+                <a href="#" id="example" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Liên hệ qua hotline"><img src="./images/icon-png/icon_hotline.png" alt=""></a>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+            });
+        </script>
+    </div>
     <header class="header position-relative">
         <div class="top-header">
             <div class="container">
@@ -135,7 +156,7 @@
                             </div>
                             <div class="search-wrap order-1">
                                 <div class="box-search">
-                                    <div class="btn-search l-title" onclick="showForm()"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <div class="btn-search l-title" onclick="showForm()"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></div>
                                     <form action="/search.html" class="form-search" id="form-search" novalidate="novalidate">
                                         <div><input id="k" name="k" type="text" class="form-control results" placeholder="Tìm kiếm" autofocus=""></div>
                                         <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -621,7 +642,7 @@
                                                 <div class="title mb-3">
                                                     <h3>
                                                         <a href="#" class="line-clamp clamp3 hover-text-red">
-                                                            Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...  Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...
+                                                            Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ... Chương trình đón tiếp Đoàn đại biểu của Bộ Giáo dục Liên bang Nga tới thăm và ...
                                                         </a>
                                                     </h3>
                                                 </div>

@@ -100,9 +100,23 @@ jQuery(function ($) {
     });
   }
 });
+// function showForm() {
+//   var element = document.getElementById("form-search");
+//   element.classList.toggle("show");
+// }
 function showForm() {
-  var element = document.getElementById("form-search");
-  element.classList.toggle("show");
+  var form = document.getElementById("form-search");
+  var icon = document.getElementById("search-icon");
+
+  form.classList.toggle("show");
+
+  if (form.classList.contains("show")) {
+    icon.classList.remove("fa-magnifying-glass");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-magnifying-glass");
+  }
 }
 function showForm2() {
   var element = document.getElementById("form-search2");

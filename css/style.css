@@ -1525,9 +1525,11 @@ progress {
     height: 180px;
     cursor: pointer;
 }
+
 .wrap-list-album .item-detailvideo .img-album img {
     height: 100%;
 }
+
 .wrap-list-album .item-detailvideo .img-album::after {
     content: "\f144";
     font-family: "Font Awesome 6 Free";
@@ -1551,4 +1553,27 @@ progress {
 
 .wrap-list-album .item-detailvideo .img-album:active::after {
     transform: translate(-50%, -50%) scale(0.9);
+}
+
+.link-contact {
+    position: fixed;
+    bottom: 125px;
+    right: 14px;
+    z-index: 10;
+}
+
+#back-to-top.show {
+    bottom: 33%;
+    right: 14px;
+}
+
+.zalo-wrap {
+    position: fixed;
+    bottom: 53px !important;
+    right: 14px;
+    z-index: 10;
+}
+
+.zalo-chat-widget {
+    position: relative !important;
 }
